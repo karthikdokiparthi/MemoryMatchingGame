@@ -105,7 +105,7 @@ function checkForMatch() {
                 clearInterval(timer);
                 matchWinSound.play();
                 resultCard();
-            }, 1000);
+            }, 500);
         }
     } else {
         nomatchSound.play();
