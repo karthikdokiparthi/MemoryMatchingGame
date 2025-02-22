@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Matching Game</title>
+    <script src="https://kit.fontawesome.com/acf205ba5f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Main Container -->
+    <div id="main-container">
+        <!-- Home screen -->
+        <div class="container" id="home-screen">
+            <div class="title">
+                <span class="word">Memory </span>
+                <span class="word">Matching</span>
+                <span class="word">Game</span>
+            </div>
+            <button class="play-btn" onclick="startGame()"><i class="fa-solid fa-play"></i> Play</button>
+        </div>
+        <!-- Game Section -->
+        <div class="container" id="game-selection" style="display: none;">
+            <h1>Select Your Card Theme</h1>
+            <div class="game-options">
+                <div class="game-option" onclick="loadGame('pokemons.json')">
+                    <img src="http://internovam.com/blog/wp-content/uploads/2016/07/Screenshot_3-1024x640.jpg"
+                        alt="Pokémon Cards" />
+                </div>
+                <div class="game-option" onclick="loadGame('benten.json')">
+                    <img src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/e3a4184994bea8c0f84601ce2b4e7c1055f6e44c01704f8a213d227a990f6333._RI_TTW_.jpg"
+                        alt="Ben 10 Cards" />
+                </div>
+                <div class="game-option" onclick="loadGame('fruits.json')">
+                    <img src="https://www.hdwallpapersfreedownload.com/uploads/large/fruits/gorgeous-mix-fresh-fruits-hd.jpg"
+                        alt="Fruits Cards" />
+                </div>
+                <div class="game-option" onclick="loadGame('avengers.json')">
+                    <img src="https://www.komar.de/media/catalog/product/cache/5/image/9df78eab33525d08d6e5fb8d27136e95/8/-/8-4032_2_1.jpg"
+                        alt="Avengers Cards" />
+                </div>
+                <div class="game-option" onclick="loadGame('indianCricketers.json')">
+                    <img src="https://sportscafe.in/img/es3-cfill-w800-h400/articles/Cricket_1/is%20India's%20Cricket%20Team%20an%20unstoppable%20Force%20(1).jpg"
+                        alt="Cricketers Cards" />
+                </div>
+                <div class="game-option" onclick="loadGame('emojis.json')">
+                    <img src="https://www.diariopanorama.com/fotos/notas/2022/09/25/emojis-426768-130329.jpg"
+                        alt="Emojis Cards" />
+                </div>
+                <div class="game-option" onclick="loadGame('animals.json')">
+                    <img src="https://wallpaperaccess.com/full/759396.jpg" alt="Animals Cards" />
+                </div>
+                <div class="game-option" onclick="loadGame('flags.json')">
+                    <img src="https://fbcd.co/images/products/78d7a6b6ea441ed6eb336f8e160c4788_resize.jpg"
+                        alt="Animals Cards" />
+                </div>
+            </div>
+        </div>
+        <!-- Game cards section -->
+        <div class="container" id="game-screen" style="display: none;">
+            <div class="status-bar">
+                <span id="timer">Time: 60s</span>
+                <span id="score">Score: 0</span>
+            </div>
+            <div id="game-board"><!-- Javascript content --></div>
+            <div class="game-Btn">
+                <button id="restartBtn" onclick="backToOptions()"><i class="fa-solid fa-arrow-left"></i> Back</button>
+                <button id="restartBtn" onclick="restartGame()"><i class="fa-solid fa-rotate-left"></i> Restart</button>
+
+            </div>
+        </div>
+        <!-- Result  info container -->
+        <div class="result-card" id="game-result" style="display: none;">
+            <div class="result-container">
+                <p id="result-info"></p>
+                <button class="result-btn" onclick="backToOptions()"><i class="fa-solid fa-bars"></i> Menu</button>
+                <button class="result-btn" onclick="restartGame()"><i class="fa-solid fa-rotate-left"></i>
+                    Restart</button>
+                <button class="result-btn" id="next-btn" onclick="nextGame()"><i class="fa-solid fa-forward-step"></i>
+                    Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
