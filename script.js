@@ -161,7 +161,7 @@ function resultCard() {
         dataInfo.innerHTML = `You won the game in ${60 - timeLeft} seconds! Score: ${score}`;
         document.getElementById('next-btn').style.display = 'inline';
     } else {
-        dataInfo.innerHTML = `Game Over! Score: ${score}`;
+        dataInfo.innerHTML = `Time up Game Over! Score: ${score}`;
         document.getElementById('next-btn').style.display = 'none';
     }
 }
